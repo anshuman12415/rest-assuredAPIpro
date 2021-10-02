@@ -16,13 +16,11 @@ import static com.jayway.restassured.RestAssured.*;
 
 public class studentPostTest {
 
-	@BeforeClass
-	public static void init() {
-		RestAssured.baseURI = "http://localhost";
-		RestAssured.port = 9191;
-		RestAssured.basePath = "/student";
-	}
-
+	
+	  @BeforeClass public static void init() { RestAssured.baseURI =
+	  "http://localhost"; RestAssured.port = 9191; RestAssured.basePath =
+	  "/student"; }
+	 
 	@Test
 	public void createNewStudent() {
 		ArrayList<String> courses = new ArrayList<String>();

@@ -11,13 +11,12 @@ import com.jayway.restassured.response.Response;
 import static com.jayway.restassured.RestAssured.*;
 
 public class studentGETtest {
-
-	@BeforeClass
-	public static void init() {
-		RestAssured.baseURI = "http://localhost";
-		RestAssured.port = 9191;
-		RestAssured.basePath = "/student";
-	}
+	
+	  
+	  @BeforeClass public static void init() { RestAssured.baseURI =
+	  "http://localhost"; RestAssured.port = 9191; RestAssured.basePath =
+	  "/student"; }
+	 
 
 	/*
 	 * @Test public void getAllstudentdata() {
@@ -38,15 +37,14 @@ public class studentGETtest {
 
 	@Test
 	public void getStudentfromME() {
-		Response response = given()
-				.when().
-				get("/list?programme=Mechanical Engineering&limit=2");
+		Response response = given().when().get("/list?programme=Mechanical Engineering&limit=2");
 		System.out.println(response.body().prettyPeek());
 	}
+
 	@Test
 	public void getStudentfromME2() {
 		Response response2 = given().param("programme", "Mechanical Engineering").param("limit", 2).when().get("/list");
-				
+
 		System.out.println(response2.body().prettyPeek());
 	}
 }

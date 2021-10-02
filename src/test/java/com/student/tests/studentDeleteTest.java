@@ -1,6 +1,7 @@
 package com.student.tests;
 
 import static org.hamcrest.Matchers.*;
+import static com.jayway.restassured.RestAssured.*;
 
 import java.util.ArrayList;
 
@@ -12,16 +13,15 @@ import com.jayway.restassured.http.ContentType;
 import com.jayway.restassured.response.Response;
 import com.student.model.Student;
 
-import static com.jayway.restassured.RestAssured.*;
+
 
 public class studentDeleteTest {
 
-	@BeforeClass
-	public static void init() {
-		RestAssured.baseURI = "http://localhost";
-		RestAssured.port = 9191;
-		RestAssured.basePath = "/student";
-	}
+	
+	  @BeforeClass public static void init() { RestAssured.baseURI =
+	  "http://localhost"; RestAssured.port = 9191; RestAssured.basePath =
+	  "/student"; }
+	 
 
 	@Test
 	public void DeleteNewStudent() {

@@ -15,13 +15,11 @@ import com.student.model.Student;
 import static com.jayway.restassured.RestAssured.*;
 
 public class studentPatchTest {
-
-	@BeforeClass
-	public static void init() {
-		RestAssured.baseURI = "http://localhost";
-		RestAssured.port = 9191;
-		RestAssured.basePath = "/student";
-	}
+	
+	  @BeforeClass public static void init() { RestAssured.baseURI =
+	  "http://localhost"; RestAssured.port = 9191; RestAssured.basePath =
+	  "/student"; }
+	 
 
 	@Test
 	public void createNewStudent() {
